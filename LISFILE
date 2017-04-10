@@ -1,0 +1,23 @@
+SIC Assembler V1.2
+
+1000        test     start   1000                                             
+1000 041008 c        ldx     =c'0'                                            
+1003 041006 v        ldx     =x'201'                                          
+1006                 LTORG               
+1006 000201 *        byte    x'201'           
+1008 000030 *        byte    x'30'           
+100B 041022          ldx     =-16                                             
+100E 041022          ldx     =-16                                             
+1011 041021          ldx     =+16                                             
+1014        g        equ     v-c+5                                            
+1017        hj       equ     *                                                
+101A 041021          ldx     =16                                              
+101D                 org     v                       
+1003 041008          ldx     =x'30'                                           
+1006                 org                             
+101D 041020          ldx     =x'12'                                           
+1020 000012 *        byte    x'12'           
+1021 000010 *        byte    x'10'           
+1022 ffffff *        byte    x'fffffff0'           
+     f0
+1026                 end     test                                             

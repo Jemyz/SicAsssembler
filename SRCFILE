@@ -1,0 +1,15 @@
+test     start   1000
+c        ldx     =c'0'
+v        ldx     =x'201'
+         LTORG  
+         ldx     =-16
+         ldx     =-16
+         ldx     =+16
+g        equ     v-c+5
+hj       equ     *
+         ldx     =16
+         org     v
+         ldx     =x'30'
+         org
+         ldx     =x'12'
+         end     test
